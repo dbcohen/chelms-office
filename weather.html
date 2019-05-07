@@ -15,6 +15,11 @@
 			flex-flow: row wrap;
 		}
 
+		#left, #right {
+			flex-flow: column;
+			width: 50%;
+		}
+
 		.widget {
 			flex: 1 1 auto;
 			min-width: 50%;
@@ -25,21 +30,25 @@
 <body>
 	<h2>Weather in Chelmsford, MA 01824</h2>
 	<div id="main">
+		<div id="left">
 			<div id="current" class="widget">
-					<script type='text/javascript' src='https://darksky.net/widget/graph-bar/42.5998,-71.3673/us12/en.js?width=100%&height=400&title=&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-				</div>
-
-				<div id="week" class="widget">
-					<script type='text/javascript' src='https://darksky.net/widget/default/42.5998,-71.3673/us12/en.js?width=100%&height=400&title=&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>
-				</div>
-
-				<div id="day" class="widget">
-					<script type='text/javascript' src='https://darksky.net/widget/graph/42.5998,-71.3673/us12/en.js?width=100%&height=400&title=&textColor=333333&bgColor=FFFFFF&transparency=false&fontFamily=Default&customFont=&units=us&graph=temperature_graph&timeColor=333333&tempColor=333333&lineColor=333333&markerColor=333333'></script>
-				</div>
-
-				<div id="map" class="widget">
-					<script src='https://darksky.net/map-embed/@radar,42.341,-71.813,8.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar'></script>
-				</div>
+				<script type='text/javascript' src='https://darksky.net/widget/graph-bar/42.5998,-71.3673/us12/en.js?width=100%&height=290&title=&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
+			</div>
+			<div id="day" class="widget">
+				<script type='text/javascript' src='https://darksky.net/widget/graph/42.5998,-71.3673/us12/en.js?width=100%&height=280&title=&textColor=333333&bgColor=FFFFFF&transparency=false&fontFamily=Default&customFont=&units=us&graph=temperature_graph&timeColor=333333&tempColor=333333&lineColor=333333&markerColor=333333'></script>
+			</div>
+			<div id="week" class="widget">
+				<script type='text/javascript' src='https://darksky.net/widget/default/42.5998,-71.3673/us12/en.js?width=100%&height=350&title=&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>
+			</div>
+		</div>
+		<div id="right">
+			<div id="map" class="widget">
+					<script src='https://darksky.net/map-embed/@radar,42.591,-71.356,12.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar&marker=42.591,-71.356&marker-name=Chelmsford'></script>
+			</div>
+			<div id="map2" class="widget">
+				<script src='https://darksky.net/map-embed/@radar,42.341,-71.813,8.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar&marker=42.591,-71.356&marker-name=Chelmsford'></script>
+			</div>
+		</div>
 	</div>
 </body>
 
