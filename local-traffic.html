@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Traffic around HCL America, Chelmsford Office</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #apollomap {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+      <div id="apollomap"></div>
+      <script>
+        function initMap() {
+          var apollo = {lat: 42.601086, lng: -71.326403};
+          var apollomap = new google.maps.Map(document.getElementById('apollomap'), {
+            zoom: 15,
+            center: apollo,
+          });
+
+          var markerApollo = new google.maps.Marker({
+            position: apollo,
+            map: apollomap,
+            title: 'HCL America'
+          });
+
+          var trafficLayerApollo = new google.maps.TrafficLayer();
+          trafficLayerApollo.setMap(apollomap);
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuwtYfGW2o71N_GZpkxbMbaL4qdicCJD8&callback=initMap">
+      </script>
+  </body>
+
+</html>
