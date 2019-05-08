@@ -27,8 +27,8 @@
 	</style>
 </head>
 
-<body>
-	<h2>Weather in Chelmsford, MA 01824</h2>
+<body onload="getTime()">
+	<h2>Weather in Chelmsford, MA 01824 @ <span id="time"></span></h2>
 	<div id="main">
 		<div id="left">
 			<div id="current" class="widget">
@@ -50,6 +50,12 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		function getTime() {
+			var timeElem = document.getElementById('time');
+			timeElem.innerText = (new Date).toLocaleTimeString()
+		}
+	</script>
 </body>
 
 </html>
