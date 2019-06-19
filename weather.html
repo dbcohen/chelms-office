@@ -55,7 +55,7 @@
 	<script>
 		function getTime() {
 			var timeElem = document.getElementById('time');
-			timeElem.innerText = (new Date().toString())
+			timeElem.innerText = (new Date().toDateString() + ', ' + new Date().toLocaleTimeString())
 		}
 	</script>
 </body>
