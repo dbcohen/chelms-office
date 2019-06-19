@@ -22,9 +22,22 @@
 .gmnoprint {
     display: none !important;
 }
+div#time {
+    top: 96%;
+    height: 35px;
+    position: absolute;
+    z-index: 99999;
+    color: white;
+    font-family: helvetica serif;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
     </style>
   </head>
-  <body>
+  <body onload="getTime()">
       <div id="apollomap"></div>
       <script>
         function initMap() {
@@ -47,6 +60,13 @@
       <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuwtYfGW2o71N_GZpkxbMbaL4qdicCJD8&callback=initMap">
       </script>
+	  <div id="time">Snapshot taken at: <span id="thetime"></span></div>
+	  	<script>
+		function getTime() {
+			var timeElem = document.getElementById('thetime');
+			timeElem.innerText = (new Date).toLocaleTimeString()
+		}
+	</script>
   </body>
 
 </html>
